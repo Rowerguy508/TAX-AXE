@@ -13,7 +13,7 @@ export default function LandingPage() {
           <Link href="/" className="flex items-center gap-2 group">
             <div className="relative">
               <Image
-                src="/logo/256.png"
+                src="/logo/axe.svg"
                 alt="Logo"
                 width={32}
                 height={32}

@@ -48,7 +48,7 @@ export default async function SelfHostedWelcomePage() {
       <CardDescription className="flex flex-col gap-4 text-center text-lg">
         <p>Bienvenido a tu instancia de Tax Axe. Configuremos un par de ajustes para empezar.</p>
         <SelfHostedSetupFormClient defaultProvider={defaultProvider} defaultApiKeys={defaultApiKeys} />
-      </CardDescription>
+      </div>
     </Card>
   )
 }
