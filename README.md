@@ -1,6 +1,6 @@
 <div align="center"><a name="readme-top"></a>
 
-<img src="public/logo/axe.svg" alt="Tax Axe logo" width="280">
+<img src="public/logo/512.png" alt="Tax Axe logo" width="280">
 
 # Tax Axe
 ### Contabilidad con IA, enfocada en equipos hispanohablantes

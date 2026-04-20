@@ -40,32 +40,13 @@ export default async function SelfHostedWelcomePage() {
   }
 
   return (
-    <Card className="w-full max-w-3xl mx-auto p-6 sm:p-10 flex flex-col gap-8 border-pink-100 shadow-xl">
-      <div className="flex flex-col items-center text-center gap-3">
-        <Image src="/logo/axe.svg" alt="Tax Axe logo" width={112} height={112} className="w-24 h-24 sm:w-28 sm:h-28" />
-        <CardTitle className="text-3xl font-bold">
-          <ColoredText>Tax Axe · Setup Self-Hosted</ColoredText>
-        </CardTitle>
-        <CardDescription className="text-base sm:text-lg max-w-2xl">
-          Bienvenido. Esta pantalla te ayuda a dejar lista tu instancia en menos de 5 minutos.
-        </CardDescription>
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-3">
-        {[
-          { step: "1", title: "Proveedor LLM", text: "Elige OpenAI, Google o Mistral para el análisis de documentos." },
-          { step: "2", title: "API Key", text: "Pega tu clave para habilitar extracción de datos y OCR con IA." },
-          { step: "3", title: "Guardar", text: "Confirma y entra al dashboard para empezar a subir comprobantes." },
-        ].map((item) => (
-          <div key={item.step} className="rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
-            <p className="text-xs font-semibold text-slate-500 mb-1">Paso {item.step}</p>
-            <p className="font-semibold text-slate-900">{item.title}</p>
-            <p className="text-sm text-slate-600 mt-1">{item.text}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="rounded-2xl border border-pink-100 bg-white p-4 sm:p-6">
+    <Card className="w-full max-w-xl mx-auto p-8 flex flex-col items-center justify-center gap-4">
+      <Image src="/logo/512.png" alt="Logo" width={144} height={144} className="w-36 h-36" />
+      <CardTitle className="text-3xl font-bold ">
+        <ColoredText>Tax Axe: Self-Hosted Edition</ColoredText>
+      </CardTitle>
+      <CardDescription className="flex flex-col gap-4 text-center text-lg">
+        <p>Bienvenido a tu instancia de Tax Axe. Configuremos un par de ajustes para empezar.</p>
         <SelfHostedSetupFormClient defaultProvider={defaultProvider} defaultApiKeys={defaultApiKeys} />
       </div>
     </Card>
