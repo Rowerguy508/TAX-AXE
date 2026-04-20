@@ -14,14 +14,14 @@ export default async function SelfHostedWelcomePage() {
       <Card className="w-full max-w-xl mx-auto p-8 flex flex-col items-center justify-center gap-6">
         <CardTitle className="text-2xl font-bold flex items-center gap-2">
           <ShieldAlert className="w-6 h-6" />
-          <span>Self-Hosted Mode is not enabled</span>
+          <span>El modo self-hosted no está habilitado</span>
         </CardTitle>
         <CardDescription className="text-center text-lg flex flex-col gap-2">
           <p>
-            To use TaxHacker in self-hosted mode, please set <code className="font-bold">SELF_HOSTED_MODE=true</code> in
-            your environment.
+            Para usar Tax Axe en modo self-hosted, configura{" "}
+            <code className="font-bold">SELF_HOSTED_MODE=true</code> en tu entorno.
           </p>
-          <p>In self-hosted mode you can use your own ChatGPT API key and store your data on your own server.</p>
+          <p>En self-hosted puedes usar tu propia API key de ChatGPT y guardar los datos en tu servidor.</p>
         </CardDescription>
       </Card>
     )
@@ -43,10 +43,10 @@ export default async function SelfHostedWelcomePage() {
     <Card className="w-full max-w-xl mx-auto p-8 flex flex-col items-center justify-center gap-4">
       <Image src="/logo/512.png" alt="Logo" width={144} height={144} className="w-36 h-36" />
       <CardTitle className="text-3xl font-bold ">
-        <ColoredText>TaxHacker: Self-Hosted Edition</ColoredText>
+        <ColoredText>Tax Axe: Self-Hosted Edition</ColoredText>
       </CardTitle>
       <CardDescription className="flex flex-col gap-4 text-center text-lg">
-        <p>Welcome to your own instance of TaxHacker. Let&apos;s set up a couple of settings to get started.</p>
+        <p>Bienvenido a tu instancia de Tax Axe. Configuremos un par de ajustes para empezar.</p>
         <SelfHostedSetupFormClient defaultProvider={defaultProvider} defaultApiKeys={defaultApiKeys} />
       </CardDescription>
     </Card>

@@ -14,12 +14,12 @@ export default async function ChoosePlanPage() {
     <div className="container mx-auto px-4 py-8">
       <Card className="w-full max-w-4xl mx-auto p-8 flex flex-col items-center justify-center gap-8">
         <CardTitle className="text-4xl font-bold text-center">
-          <ColoredText>TaxHacker Cloud Edition</ColoredText>
-          <h2 className="mt-3 text-2xl font-semibold text-muted-foreground">Cloud plans are not available yet</h2>
+          <ColoredText>Tax Axe Edición Cloud</ColoredText>
+          <h2 className="mt-3 text-2xl font-semibold text-muted-foreground">Los planes cloud aún no están disponibles</h2>
         </CardTitle>
         <CardContent className="p-0 w-full">
           <div className="text-center text-md text-muted-foreground">
-            Cloud plans are not available yet. Please use the self-hosted version or reach out for questions.
+            Por ahora usa la versión self-hosted o contáctanos para resolver dudas.
           </div>
         </CardContent>
 
@@ -29,7 +29,7 @@ export default async function ChoosePlanPage() {
             className="flex flex-row gap-1 items-center hover:text-primary transition-colors underline"
           >
             <Mail className="w-4 h-4" />
-            Contact us for custom plans
+            Contáctanos para planes personalizados
           </Link>
         </div>
       </Card>
