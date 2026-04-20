@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="64" x2="448" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ec4899"/>
+      <stop offset="1" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="188" y1="88" x2="356" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="276" y1="180" x2="332" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a16207"/>
+      <stop offset="1" stop-color="#78350f"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="40" y="40" width="432" height="432" rx="120" fill="url(#bg)"/>
+  <rect x="290" y="170" width="40" height="250" rx="20" transform="rotate(20 290 170)" fill="url(#wood)"/>
+  <path
+    d="M210 115C234 92 279 82 327 89C363 94 388 109 402 127C384 134 367 144 350 158C328 176 312 199 303 220C271 205 241 186 220 164C198 142 193 124 210 115Z"
+    fill="url(#metal)"
+  />
+  <path d="M325 150C353 133 380 123 410 120C395 148 366 179 332 198" stroke="#94a3b8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="309" cy="205" r="12" fill="#f8fafc"/>
+  <circle cx="309" cy="205" r="6" fill="#94a3b8"/>
+</svg>

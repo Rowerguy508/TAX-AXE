@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/com
 import { ColoredText } from "@/components/ui/colored-text"
 import config from "@/lib/config"
 import { PLANS, stripeClient } from "@/lib/stripe"
-import { createUserDefaults, isDatabaseEmpty } from "@/models/defaults"
 import { getOrCreateCloudUser } from "@/models/users"
 import { Cake, Ghost } from "lucide-react"
 import Link from "next/link"
@@ -45,10 +44,10 @@ export default async function CloudPaymentSuccessPage({
       <Card className="w-full max-w-xl mx-auto p-8 flex flex-col items-center justify-center gap-4">
         <Cake className="w-36 h-36" />
         <CardTitle className="text-3xl font-bold ">
-          <ColoredText>Payment Successful</ColoredText>
+          <ColoredText>Pago exitoso</ColoredText>
         </CardTitle>
         <CardDescription className="text-center text-xl">
-          Welcome to TaxHacker, {user.name}. You can login to your account now
+          Bienvenido a Tax Axe, {user.name}. Ya puedes iniciar sesión en tu cuenta.
         </CardDescription>
         <CardContent className="w-full">
           <LoginForm defaultEmail={user.email} />
@@ -59,11 +58,11 @@ export default async function CloudPaymentSuccessPage({
     return (
       <Card className="w-full max-w-xl mx-auto p-8 flex flex-col items-center justify-center gap-4">
         <Ghost className="w-36 h-36" />
-        <CardTitle className="text-3xl font-bold ">Payment Failed</CardTitle>
-        <CardDescription className="text-center text-xl">Please try again...</CardDescription>
+        <CardTitle className="text-3xl font-bold ">Pago fallido</CardTitle>
+        <CardDescription className="text-center text-xl">Inténtalo nuevamente.</CardDescription>
         <CardFooter>
           <Button asChild>
-            <Link href="/">Go Home</Link>
+            <Link href="/">Ir al inicio</Link>
           </Button>
         </CardFooter>
       </Card>

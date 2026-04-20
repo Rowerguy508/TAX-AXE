@@ -14,11 +14,11 @@ export async function WelcomeWidget() {
 
   return (
     <Card className="flex flex-col lg:flex-row items-start gap-10 p-10 w-full">
-      <Image src="/logo/1024.png" alt="Logo" width={256} height={256} className="w-64 h-64" />
+      <Image src="/logo/axe.svg" alt="Logo" width={256} height={256} className="w-64 h-64" />
       <div className="flex flex-col">
         <CardTitle className="flex items-center justify-between">
           <span className="text-2xl font-bold">
-            <ColoredText>Hey, I&apos;m TaxHacker 👋</ColoredText>
+            <ColoredText>¡Hola! Soy Tax Axe 👋</ColoredText>
           </span>
           <Button
             variant="outline"
@@ -34,55 +34,50 @@ export async function WelcomeWidget() {
         </CardTitle>
         <CardDescription className="mt-5">
           <p className="mb-3">
-            I&apos;m a little accountant app that helps you deal with endless receipts, checks and invoices with (you
-            guessed it) AI. Here&apos;s what I can do:
+            Soy tu asistente contable para procesar tickets, comprobantes y facturas con IA. Esto es lo que puedo hacer:
           </p>
           <ul className="mb-5 list-disc pl-5 space-y-1">
             <li>
-              <strong>Upload me a photo or a PDF</strong> and I will recognize, categorize and save it as a transaction
-              for your tax advisor.
+              <strong>Sube una foto o PDF</strong> y reconoceré, categorizaré y guardaré la transacción automáticamente.
             </li>
             <li>
-              I can <strong>automatically convert currencies</strong> and look up exchange rates for a given date.
+              Puedo <strong>convertir monedas automáticamente</strong> y usar el tipo de cambio histórico por fecha.
             </li>
             <li>
-              I even <strong>support crypto!</strong> Historical exchange rates for staking too.
+              También <strong>soporto cripto.</strong> Incluye tipos de cambio históricos.
             </li>
             <li>
-              All <strong>LLM prompts are configurable</strong>: for fields, categories and projects. You can go to
-              settings and change them however you want.
+              Todos los <strong>prompts LLM son configurables</strong>: campos, categorías y proyectos.
             </li>
             <li>
-              I save data in a <strong>local SQLite database</strong> and can export it to CSV and ZIP archives.
+              Guardo datos en una <strong>base local SQLite</strong> y puedo exportar a CSV o ZIP.
             </li>
             <li>
-              You can even <strong>create your own new fields</strong> to be analyzed and they will be included in the
-              CSV export for your tax advisor.
+              Puedes <strong>crear campos personalizados</strong> y se incluirán en las exportaciones CSV.
             </li>
             <li>
-              I&apos;m still <strong>very young</strong> and can make mistakes. Use me at your own risk!
+              Soy un proyecto en evolución y puedo cometer errores. Úsame con criterio profesional.
             </li>
           </ul>
           <p className="mb-3">
-            While I can save you a lot of time in categorizing transactions and generating reports, I still highly
-            recommend giving the results to a professional tax advisor for review when filing your taxes!
+            Aunque te ahorro mucho tiempo, te recomiendo revisar los resultados con tu asesor/a fiscal antes de declarar.
           </p>
         </CardDescription>
         <div className="mt-2">
           <Link href="https://github.com/vas3k/TaxHacker" className="text-blue-500 hover:underline">
-            Source Code
+            Código fuente
           </Link>
           <span className="mx-2">|</span>
           <Link href="https://github.com/vas3k/TaxHacker/issues" className="text-blue-500 hover:underline">
-            Request New Feature
+            Solicitar función
           </Link>
           <span className="mx-2">|</span>
           <Link href="https://github.com/vas3k/TaxHacker/issues" className="text-blue-500 hover:underline">
-            Report a Bug
+            Reportar bug
           </Link>
           <span className="mx-2">|</span>
           <Link href="mailto:me@vas3k.ru" className="text-blue-500 hover:underline">
-            Contact the Author
+            Contactar autor
           </Link>
         </div>
         <div className="flex flex-wrap gap-2 mt-8">
@@ -90,32 +85,32 @@ export async function WelcomeWidget() {
             <Link href="/settings/llm">
               <Button>
                 <Key className="h-4 w-4" />
-                Please give your ChatGPT key here
+                Añade tu API key de ChatGPT
               </Button>
             </Link>
           )}
           <Link href="/settings">
             <Button variant="outline">
               <Banknote className="h-4 w-4" />
-              Default Currency: {settings.default_currency}
+              Moneda base: {settings.default_currency}
             </Button>
           </Link>
           <Link href="/settings/categories">
             <Button variant="outline">
               <ChartBarStacked className="h-4 w-4" />
-              Categories
+              Categorías
             </Button>
           </Link>
           <Link href="/settings/projects">
             <Button variant="outline">
               <FolderOpenDot className="h-4 w-4" />
-              Projects
+              Proyectos
             </Button>
           </Link>
           <Link href="/settings/fields">
             <Button variant="outline">
               <TextCursorInput className="h-4 w-4" />
-              Custom Fields
+              Campos personalizados
             </Button>
           </Link>
         </div>
