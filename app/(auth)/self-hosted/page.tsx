@@ -45,10 +45,10 @@ export default async function SelfHostedWelcomePage() {
       <CardTitle className="text-3xl font-bold ">
         <ColoredText>Tax Axe: Self-Hosted Edition</ColoredText>
       </CardTitle>
-      <CardDescription className="flex flex-col gap-4 text-center text-lg">
-        <p>Bienvenido a tu instancia de Tax Axe. Configuremos un par de ajustes para empezar.</p>
-        <SelfHostedSetupFormClient defaultProvider={defaultProvider} defaultApiKeys={defaultApiKeys} />
-      </div>
+      <CardDescription className="text-center text-lg">
+        Bienvenido a tu instancia de Tax Axe. Configuremos un par de ajustes para empezar.
+      </CardDescription>
+      <SelfHostedSetupFormClient defaultProvider={defaultProvider} defaultApiKeys={defaultApiKeys} />
     </Card>
   )
 }
