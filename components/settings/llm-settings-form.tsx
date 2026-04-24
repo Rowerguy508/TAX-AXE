@@ -43,7 +43,7 @@ export default function LLMSettingsForm({
     const values: Record<string, { apiKey: string; model: string; baseUrl: string }> = {}
     PROVIDERS.forEach((provider) => {
       values[provider.key] = {
-        apiKey: settings[provider.apiKeyName],
+        apiKey: settings[provider.apiKeyName] ?? "",
         model: settings[provider.modelName] || provider.defaultModelName,
         baseUrl: provider.baseUrlName ? settings[provider.baseUrlName] || provider.defaultBaseUrl || "" : "",
       }
