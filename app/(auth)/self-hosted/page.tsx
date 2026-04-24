@@ -16,13 +16,15 @@ export default async function SelfHostedWelcomePage() {
           <ShieldAlert className="w-6 h-6" />
           <span>El modo self-hosted no está habilitado</span>
         </CardTitle>
-        <CardDescription className="text-center text-lg flex flex-col gap-2">
-          <p>
+        <div className="text-center text-lg flex flex-col gap-2">
+          <CardDescription>
             Para usar Tax Axe en modo self-hosted, configura{" "}
             <code className="font-bold">SELF_HOSTED_MODE=true</code> en tu entorno.
-          </p>
-          <p>En self-hosted puedes usar tu propia API key de ChatGPT y guardar los datos en tu servidor.</p>
-        </CardDescription>
+          </CardDescription>
+          <CardDescription>
+            En self-hosted puedes usar tu propia API key de ChatGPT y guardar los datos en tu servidor.
+          </CardDescription>
+        </div>
       </Card>
     )
   }

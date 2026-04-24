@@ -1,5 +1,6 @@
 "use server"
 
+import { PROVIDERS } from "@/lib/llm-providers"
 import { createUserDefaults, isDatabaseEmpty } from "@/models/defaults"
 import { updateSettings } from "@/models/settings"
 import { getOrCreateSelfHostedUser } from "@/models/users"
@@ -28,6 +29,11 @@ export async function selfHostedGetStartedAction(formData: FormData) {
     }
   }
 
+  const provider = formData.get("provider")
+  if (typeof provider === "string" && PROVIDERS.some((p) => p.key === provider)) {
+    const order = [provider, ...PROVIDERS.map((p) => p.key).filter((k) => k !== provider)]
+    await updateSettings(user.id, "llm_providers", order.join(","))
+  }
 
   const defaultCurrency = formData.get("default_currency")
   if (defaultCurrency) {
